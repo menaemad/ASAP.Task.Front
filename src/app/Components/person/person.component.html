@@ -1,0 +1,27 @@
+<div class="container-fluid m-3">
+  <button  class="btn btn-primary m-3"  (click)="create()">Create</button>
+
+<div class="row">
+    <table class="table m-3">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of Persons">
+            <th scope="row">{{person.id}}</th>
+            <th scope="row">{{person.fullName}}</th>
+            <th scope="row">{{person.email}}</th>
+            <th> 
+              <button  class="btn btn-secondary ms-3" (click)="edit(person.id)">Edit</button>
+              <button   class="btn btn-danger ms-3"  (click)="delete(person.id)">Delete</button>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>
